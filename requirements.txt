@@ -1,9 +1,11 @@
 fastapi
-pydantic
-typing
-langchain_community
-langgraph
-langchain_groq
 uvicorn
-streamlit
+pydantic
+langchain-community
+langgraph
+langchain-groq
 langchain-mongodb
+streamlit
+requests
+redis
+mlflow
