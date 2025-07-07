@@ -16,4 +16,6 @@ RUN pip install -r requirements.txt
 EXPOSE 8000 8501
 
 # Start FastAPI in the background and Streamlit as the main process
-CMD uvicorn app:app --host 0.0.0.0 --port 8000 & streamlit run ui.py --server.port 8501 --server.address 0.0.0.0
+RUN chmod +x start_app.sh
+
+CMD ["./start_app.sh"]
