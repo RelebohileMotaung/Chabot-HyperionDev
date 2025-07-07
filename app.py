@@ -101,7 +101,7 @@ def chat_endpoint(request: RequestState):
             chat_message_history.add_user_message(msg)
 
         llm = ChatGroq(groq_api_key=groq_api_key, model_name=request.model_name)
-        agent = create_react_agent(llm, tools=tools, state_modifier=request.system_prompt)
+        agent = create_react_agent(llm, tools=tools)
         state = {"messages": request.messages}
         result = agent.invoke(state)
 
