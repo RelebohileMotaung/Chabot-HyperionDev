@@ -4,7 +4,7 @@ import requests
 # Streamlit App Configuration
 st.set_page_config(page_title="LangGraph Agent UI", layout="centered")
 
-API_URL = "http://localhost:8000/api"
+API_URL = "http://localhost:8000"
 
 def main_app():
     st.title("LangGraph Chatbot Agent")
