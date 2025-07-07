@@ -20,7 +20,7 @@ from langchain_mongodb.chat_message_histories import MongoDBChatMessageHistory
 # Initialize MongoDBChatMessageHistory for chat history storage
 chat_message_history = MongoDBChatMessageHistory(
     session_id="test_session",
-    connection_string=os.getenv("MONGODB_CONNECTION_STRING", "mongodb+srv://relebohilejamesmotaung:cSHFkOv4NZCKxIWL@cluster0.2hv7u.mongodb.net/"),
+    connection_string=os.getenv("MONGODB_CONNECTION_STRING", "mongodb+srv://:@cluster0.2hv7u.mongodb.net/"),
     database_name=os.getenv("MONGODB_DATABASE_NAME", "hyperiondev_db"),
     collection_name=os.getenv("MONGODB_COLLECTION_NAME", "chat_histories"),
 )
@@ -32,8 +32,8 @@ if not redis_url:
 redis_client = redis.from_url(redis_url)
 
 # Retrieve and set API keys for external tools and services
-groq_api_key = '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'
-os.environ["TAVILY_API_KEY"] = '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'
+groq_api_key = ''
+os.environ["TAVILY_API_KEY"] = ''
 
 # Predefined list of supported model names
 MODEL_NAMES = [
