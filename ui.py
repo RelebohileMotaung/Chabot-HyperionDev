@@ -10,7 +10,7 @@ def main_app():
     st.title("LangGraph Chatbot Agent")
     st.write("Interact with the LangGraph-based agent using this interface.")
 
-    given_system_prompt = st.text_area("Define your AI Agent:", height=10, placeholder="Type your system prompt here...")
+    given_system_prompt = st.text_area("Define your AI Agent:", height=68, placeholder="Type your system prompt here...")
 
     MODEL_NAMES = [
         "meta-llama/llama-4-scout-17b-16e-instruct",
