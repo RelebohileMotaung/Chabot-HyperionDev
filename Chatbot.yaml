@@ -1,0 +1,6 @@
+Image: yourusername/langgraph-agent:v1.0
+Port: 80
+Env Vars:
+  - MONGODB_URI=your_atlas_uri
+  - REDIS_URL=your_redis_url
+  - GROQ_API_KEY=your_key
