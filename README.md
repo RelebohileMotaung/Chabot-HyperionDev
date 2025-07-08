@@ -57,3 +57,28 @@ A production-ready AI chat application with FastAPI backend and Streamlit fronte
    ```
    docker push yourusername/langgraph-agent:v1.0
    ```
+
+
+   # LangGraph AI Agent (Full-Stack)
+
+![Deployment Pipeline](https://i.imgur.com/pipeline-diagram.png)  
+*Docker Hub → Render deployment workflow*
+
+## 🚀 Live Deployment
+**[Production App on Render](https://chabot-hyperiondev-12.onrender.com/)**  
+*Deployed from Docker Hub image*
+
+## 📦 Deployment Architecture
+1. **Development**  
+   `Dockerfile` → Local testing
+2. **Registry**  
+   `docker push` → [Docker Hub](https://hub.docker.com/r/yourusername/your-image)
+3. **Production**  
+   Render pulls from Docker Hub
+
+```mermaid
+graph LR
+    A[Local Docker Build] --> B[Docker Hub]
+    B --> C[Render Service]
+    C --> D[(MongoDB Atlas)]
+    C --> E[(Redis)]
